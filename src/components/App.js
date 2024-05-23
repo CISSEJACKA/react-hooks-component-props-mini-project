@@ -1,15 +1,24 @@
-import React from "react";
-import blogData from "../data/blog";
+// App.js
+import React from 'react';
+import Header from './Header';
+import About from './About';
+import ArticleList from './ArticleList';
 
-console.log(blogData);
+const posts = [
+  { id: 1, title: "React Basics", date: "March 15, 2023", preview: "An introduction to React." },
+  { id: 2, title: "State and Props", date: "April 5, 2023", preview: "Understanding state and props." },
+  { id: 3, title: "Lifecycle Methods", preview: "Learn about React lifecycle methods." }
+];
 
 function App() {
   return (
-    <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
+    <div>
+      <Header name="My Blog" />
+      <About image="https://via.placeholder.com/215" about="This is my blog about React." />
+      <ArticleList posts={posts} />
     </div>
   );
 }
 
 export default App;
+
